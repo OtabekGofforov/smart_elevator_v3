@@ -28,7 +28,8 @@ The system comprises the following components:
 - **AWS EC2 Server**: Hosts the web application and handles user authentication and relay control.
 - **Web Application**: Provides a user interface for managing users and viewing access logs.
 
-![System Architecture](![image](https://github.com/OtabekGofforov/smart_elevator_v3/assets/167739463/84999432-099c-4fdb-b732-47a2d0411943))
+![System Architecture](![image_2024-06-05_16-14-28](https://github.com/OtabekGofforov/smart_elevator_v3/assets/167739463/e477e8e2-4ef9-4e47-8a6b-68c78cd9f4d7)
+)
 
 ## Prerequisites
 - Docker and Docker Compose
