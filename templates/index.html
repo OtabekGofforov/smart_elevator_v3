@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Access Control</title>
+</head>
+<body>
+    <h1>User Access Control</h1>
+    <a href="/add_user">Add User</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>UID</th>
+            <th>Name</th>
+            <th>Last Usage Time</th>
+            <th>Actions</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td>{{ user[3] }}</td>
+            <td>
+                <form action="/delete_user/{{ user[0] }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/trigger_relay" method="post">
+        <button type="submit">Trigger Relay</button>
+    </form>
+
+    <h2>Usage History</h2>
+    <table border="1">
+        <tr>
+            <th>User Name</th>
+            <th>Usage Time</th>
+        </tr>
+        {% for log in usage_history %}
+        <tr>
+            <td>{{ log[0] }}</td>
+            <td>{{ log[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
